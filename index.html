@@ -113,14 +113,55 @@ top:228px;
     color:#f22909;
     font-family: 'Jim Nightshade', cursive;
 }
-.q {
+.q1 {
     position: absolute;
-    left: 10%;
+    left: 15%;
     top: 35%;
     width: 100%;
     font-size: 20px;
     color:#000;
     font-family: 'Jim Nightshade', cursive;
+}
+.q2 {
+    position: absolute;
+    left: 65%;
+    top: 35%;
+    width: 100%;
+    font-size: 20px;
+    color:#000;
+    font-family: 'Jim Nightshade', cursive;
+}
+.submit {
+    position:relative;
+    left: 75%;
+    margin-top: 95%;
+    width: 100%;
+    font-size: 20px;
+    color:#000;
+    font-family: 'Jim Nightshade', cursive;
+}
+
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #de2e20;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #b91b0e}
+
+.button:active {
+  background-color: #b91b0e;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
 </style>
 </head>
@@ -136,7 +177,8 @@ top:228px;
   </div>
 </div>
 
-<form class="q">
+<form>
+<div class="q1">
 <h3> Q:1   This sign represents <h3>
 <img src="images/1.png"></img><br><br>
 <input type="radio" name="Q1" id="Q1_A" value="G" /> Guarded level cross <br>
@@ -155,7 +197,7 @@ top:228px;
 <input type="radio" name="Q3" id="Q3_B" value="AW" /> Axle weight limited <br>
 <input type="radio" name="Q3" id="Q3_C" value="SL" /> Speed Limit<br><br>
 
-<h3> Q:4  This sign represents <h3>
+<h3 > Q:4  This sign represents <h3>
 <img src="images/4.png"></img><br><br>
 <input type="radio" name="Q4" id="Q4_A" value="CR" /> Compulsory ahead or turn right<br>
 <input type="radio" name="Q4" id="Q4_B" value="CL" /> Compulsory ahead or turn left<br>
@@ -166,14 +208,41 @@ top:228px;
 <input type="radio" name="Q5" id="Q5_A" value="HA" />Entry only for vehicles with height above 3.5 meters<br>
 <input type="radio" name="Q5" id="Q5_B" value="WA" /> Entry only for vehicles with width above 3.5 meters<br>
 <input type="radio" name="Q5" id="Q5_C" value="NE" /> Entry for vehicles having height not exceeding 3.5 meters<br><br>
-
+</div>
+<div class="q2">
 <h3> Q:6  This sign represents <h3>
 <img src="images/6.png"></img><br><br>
 <input type="radio" name="Q6" id="Q6_A" value="SP" />Students prohibited<br>
 <input type="radio" name="Q6" id="Q6_B" value="PP" />Pedestrians permitted<br>
 <input type="radio" name="Q6" id="Q6_C" value="PPR" />Pedestrians prohibited<br><br>
 
-<button onclick="myFunction()">Submit</button>
+<h3> Q:7  This sign represents <h3>
+<img src="images/7.png"></img><br><br>
+<input type="radio" name="Q7" id="Q7_A" value="NAM" />No entry for all motor vehicles<br>
+<input type="radio" name="Q7" id="Q7_B" value="NCY" />No entry for cars and motor cycles<br>
+<input type="radio" name="Q7" id="Q7_C" value="PPR" />Entry allowed for cars and motor vehicles<br><br>
+
+<h3> Q:8  This sign represents <h3>
+<img src="images/8.png"></img><br><br>
+<input type="radio" name="Q8" id="Q8_A" value="ERP" />Entry through right side prohibited<br>
+<input type="radio" name="Q8" id="Q8_B" value="ELP" />Entry through left prohibited<br>
+<input type="radio" name="Q8" id="Q8_C" value="OP" />Overtaking prohibited<br><br>
+
+<h3> Q:9  This sign represents <h3>
+<img src="images/9.png"></img><br><br>
+<input type="radio" name="Q9" id="Q9_A" value="H" />Hospital<br>
+<input type="radio" name="Q9" id="Q9_B" value="R" />Resting<br>
+<input type="radio" name="Q9" id="Q9_C" value="F" />First Aid Post<br><br>
+
+<h3> Q:10  This sign represents <h3>
+<img src="images/10.png"></img><br><br>
+<input type="radio" name="Q10" id="Q10_A" value="RB" />Road on both sides in front<br>
+<input type="radio" name="Q10" id="Q10_B" value="NB" />Narrow bridge ahead<br>
+<input type="radio" name="Q10" id="Q10_C" value="NR" />Narrow road ahead<br><br>
+</div>
+<div class="submit">
+<button class="button" onclick="myFunction()">Submit</button>
+</div>
 </form>
 <p id="demo"></p>
 <script>
@@ -195,6 +264,18 @@ if(document.getElementById('Q5_C').checked) {
   s=s+1;
 }
 if(document.getElementById('Q6_C').checked) {
+  s=s+1;
+}
+if(document.getElementById('Q7_A').checked) {
+  s=s+1;
+}
+if(document.getElementById('Q8_C').checked) {
+  s=s+1;
+}
+if(document.getElementById('Q9_B').checked) {
+  s=s+1;
+}
+if(document.getElementById('Q10_B').checked) {
   s=s+1;
 }
 alert("Score is="+s);
