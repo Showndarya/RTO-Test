@@ -194,7 +194,7 @@ if(document.getElementById('Q4_B').checked) {
 if(document.getElementById('Q5_C').checked) {
   s=s+1;
 }
-if(document.getElementById('Q6_C').checked) {
+if(document.getElementById('Q6_B').checked) {
   s=s+1;
 }
 alert("Score is="+s);
