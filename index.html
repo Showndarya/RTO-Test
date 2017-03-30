@@ -1,0 +1,178 @@
+<html>
+<head>
+<title> RTO Test </title>
+<style>
+@import url('https://fonts.googleapis.com/css?family=Jim+Nightshade');
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+}
+body {
+	background: #f0bcb8;
+	font-family: 'Jim Nightshade', cursive;
+}
+.box-outer {
+	overflow: hidden;
+	margin: 50px auto;
+	width: 300px;
+	height: 200px;
+}
+.main_box {
+	width: 300px;
+	height: 200px;
+	position: relative;
+	/*background: #e49c85;*/
+	border: 5px solid #f0bcb8;
+}
+.bar {
+	position: absolute;
+	width: 50px;
+	height: 5px;
+	background: #e55e55;
+	transition: all 1s linear;
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	-webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+}
+.bar.delay {
+	animation-delay: 0.5s;
+	-webkit-animation-delay: 0.5s;
+}
+.top {
+	top: -5px;
+	left: -5px;
+}
+.right {
+	top: 18px;
+	right: -28px;
+	transform: rotate(90deg);
+}
+.bottom {
+	bottom: -5px;
+	left: -5px;
+}
+.left {
+	top: 18px;
+	left: -28px;
+	transform: rotate(90deg);
+}
+ @-webkit-keyframes h-move {
+ 0% {
+left: -5px;
+}
+100% {
+left: 300px;
+}
+}
+ @keyframes h-move {
+ 0% {
+left: -5px;
+}
+100% {
+left: 300px;
+}
+}
+.top, .bottom {
+	-webkit-animation-name: h-move;
+	animation-name: h-move;
+}
+ @-webkit-keyframes v-move {
+0% {
+top: -5px;
+}
+100% {
+top:228px;
+}
+}
+ @keyframes v-move {
+ 0% {
+top: -5px;
+}
+100% {
+top:228px;
+}
+}
+.right, .left {
+	-webkit-animation-name: v-move;
+	animation-name: v-move;
+}
+.center {
+    position: absolute;
+    left: 0;
+    top: 35%;
+    width: 100%;
+    text-align: center;
+    font-size: 40px;
+    color:#f22909;
+    font-family: 'Jim Nightshade', cursive;
+}
+.q {
+    position: absolute;
+    left: 10%;
+    top: 35%;
+    width: 100%;
+    font-size: 20px;
+    color:#000;
+    font-family: 'Jim Nightshade', cursive;
+}
+</style>
+</head>
+<body>
+
+<div class="box-outer">
+  <div class="main_box">
+    <div class="center">Learners's License Test</div>
+    <div class="bar top "></div>
+    <div class="bar right delay"></div>
+    <div class="bar bottom delay"></div>
+    <div class="bar left "></div>
+  </div>
+</div>
+
+<form class="q">
+<h3> Q:1   This sign represents <h3>
+<img src="1.png"></img><br><br>
+<input type="radio" name="Q1" id="Q1_A" value="G" /> Guarded level cross <br>
+<input type="radio" name="Q1" id="Q1_B" value="UG" /> Unguarded level cross <br>
+<input type="radio" name="Q1" id="Q1_C" value="BA" /> Barrier ahead <br><br>
+
+<h3> Q:2  This sign represents <h3>
+<img src="2.png"></img><br><br>
+<input type="radio" name="Q2" id="Q2_A" value="NR" /> Narrow road ahead <br>
+<input type="radio" name="Q2" id="Q2_B" value="CR" /> Cross road ahead <br>
+<input type="radio" name="Q2" id="Q2_C" value="T" /> T' intersection <br><br>
+
+
+<h3> Q:2  This sign represents <h3>
+<img src="3.png"></img><br><br>
+<input type="radio" name="Q2" id="Q2_A" value="SR" /> Side road left <br>
+<input type="radio" name="Q2" id="Q2_B" value="AW" /> Axle weight limited <br>
+<input type="radio" name="Q2" id="Q2_C" value="SL" /> Speed Limit<br><br>
+
+<button onclick="myFunction()">Submit</button>
+</form>
+<p id="demo"></p>
+<script>
+function myFunction() {
+var s=0;
+if(document.getElementById('Q1_A').checked) {
+  s=s+1;
+}
+if(document.getElementById('Q2_C').checked) {
+  s=s+1;
+}
+if(document.getElementById('Q2_B').checked) {
+  s=s+1;
+}
+alert("Score is="+s);
+}
+</script>
+</body>
+</html>
