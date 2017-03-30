@@ -138,20 +138,20 @@ top:228px;
 
 <form class="q">
 <h3> Q:1   This sign represents <h3>
-<img src="images/1.png"></img><br><br>
+<img src="/images/1.png"></img><br><br>
 <input type="radio" name="Q1" id="Q1_A" value="G" /> Guarded level cross <br>
 <input type="radio" name="Q1" id="Q1_B" value="UG" /> Unguarded level cross <br>
 <input type="radio" name="Q1" id="Q1_C" value="BA" /> Barrier ahead <br><br>
 
 <h3> Q:2  This sign represents <h3>
-<img src="images/2.png"></img><br><br>
+<img src="/images/2.png"></img><br><br>
 <input type="radio" name="Q2" id="Q2_A" value="NR" /> Narrow road ahead <br>
 <input type="radio" name="Q2" id="Q2_B" value="CR" /> Cross road ahead <br>
 <input type="radio" name="Q2" id="Q2_C" value="T" /> T' intersection <br><br>
 
 
 <h3> Q:3  This sign represents <h3>
-<img src="images/3.png"></img><br><br>
+<img src="/images/3.png"></img><br><br>
 <input type="radio" name="Q2" id="Q2_A" value="SR" /> Side road left <br>
 <input type="radio" name="Q2" id="Q2_B" value="AW" /> Axle weight limited <br>
 <input type="radio" name="Q2" id="Q2_C" value="SL" /> Speed Limit<br><br>
