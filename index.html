@@ -1,7 +1,13 @@
 <html>
 <head>
 <title> RTO Test </title>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <style>
+
 @import url('https://fonts.googleapis.com/css?family=Jim+Nightshade');
 * {
 	margin: 0;
@@ -163,6 +169,26 @@ top:228px;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
+
+.modal-header {
+    padding:9px 15px;
+    border-bottom:1px solid #eee;
+    background-color: #e7877f;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+     border-top-left-radius: 5px;
+     border-top-right-radius: 5px;
+ }
+.modal-body {
+    text-align:center;
+    font-size:20px;
+    background-color: #f3c2be;
+}
+.modal-footer{
+     background-color: #e7877f;
+}
 </style>
 </head>
 <body>
@@ -239,14 +265,33 @@ top:228px;
 <input type="radio" name="Q10" id="Q10_A" value="RB" />Road on both sides in front<br>
 <input type="radio" name="Q10" id="Q10_B" value="NB" />Narrow bridge ahead<br>
 <input type="radio" name="Q10" id="Q10_C" value="NR" />Narrow road ahead<br><br>
-</div>
-<div class="submit">
-<button class="button" onclick="myFunction()">Submit</button>
-</div>
+
+
+ <button type="button" class= "button" data-toggle="modal" data-target="#myModal" onclick="res()">Submit</button>
+
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+   
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Congratulations...!!</h4>
+        </div>
+        <div class="modal-body">
+        <p>Your score is: </p>
+          <p id="score"></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  </div>
 </form>
-<p id="demo"></p>
 <script>
-function myFunction() {
+function res() {
 var s=0;
 if(document.getElementById('Q1_A').checked) {
   s=s+1;
@@ -278,8 +323,11 @@ if(document.getElementById('Q9_B').checked) {
 if(document.getElementById('Q10_B').checked) {
   s=s+1;
 }
-alert("Score is="+s);
+document.getElementById('score').innerHTML=s;
+$('input[type="radio"]:checked').prop('checked',false);
+
 }
 </script>
 </body>
 </html>
+
