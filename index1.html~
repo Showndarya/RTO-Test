@@ -131,7 +131,7 @@ top:228px;
   text-align: center;
   font-size: 28px;
   padding: 20px;
-  left:35%;
+left:40%;
   width: 30%;
   transition: all 0.5s;
   cursor: pointer;
@@ -176,7 +176,7 @@ top:228px;
     <div class="bar left "></div>
   </div>
 </div>
-<form action="signs.html">
+<form action="index.html">
 <button class="button center" style="vertical-align:middle" ><span>Identify the signs! </span></button>
 </form>
 
