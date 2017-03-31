@@ -1,0 +1,325 @@
+<html>
+<head>
+<title> RTO Test- Rules and Scenarios! </title>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+
+@import url('https://fonts.googleapis.com/css?family=Jim+Nightshade');
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+}
+body {
+	background: #f0bcb8;
+	font-family: 'Jim Nightshade', cursive;
+	max-width: 100%;
+        overflow-x: hidden;
+}
+.box-outer {
+	overflow: hidden;
+	margin: 50px auto;
+	width: 300px;
+	height: 200px;
+}
+.main_box {
+	width: 300px;
+	height: 200px;
+	position: relative;
+	/*background: #e49c85;*/
+	border: 5px solid #f0bcb8;
+}
+.bar {
+	position: absolute;
+	width: 50px;
+	height: 5px;
+	background: #e55e55;
+	transition: all 1s linear;
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	-webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+}
+.bar.delay {
+	animation-delay: 0.5s;
+	-webkit-animation-delay: 0.5s;
+}
+.top {
+	top: -5px;
+	left: -5px;
+}
+.right {
+	top: 18px;
+	right: -28px;
+	transform: rotate(90deg);
+}
+.bottom {
+	bottom: -5px;
+	left: -5px;
+}
+.left {
+	top: 18px;
+	left: -28px;
+	transform: rotate(90deg);
+}
+ @-webkit-keyframes h-move {
+ 0% {
+left: -5px;
+}
+100% {
+left: 300px;
+}
+}
+ @keyframes h-move {
+ 0% {
+left: -5px;
+}
+100% {
+left: 300px;
+}
+}
+.top, .bottom {
+	-webkit-animation-name: h-move;
+	animation-name: h-move;
+}
+ @-webkit-keyframes v-move {
+0% {
+top: -5px;
+}
+100% {
+top:228px;
+}
+}
+ @keyframes v-move {
+ 0% {
+top: -5px;
+}
+100% {
+top:228px;
+}
+}
+.right, .left {
+	-webkit-animation-name: v-move;
+	animation-name: v-move;
+}
+.center {
+    position: absolute;
+    left: 0;
+    top: 35%;
+    width: 100%;
+    text-align: center;
+    font-size: 40px;
+    color:#f22909;
+    font-family: 'Jim Nightshade', cursive;
+}
+.q1 {
+    position: absolute;
+    left: 10%;
+    top: 35%;
+    width: 100%;
+    font-size: 20px;
+    color:#000;
+    font-family: 'Jim Nightshade', cursive;
+}
+.q2 {
+    position: absolute;
+    left: 55%;
+    top: 35%;
+    width: 100%;
+    font-size: 20px;
+    color:#000;
+    font-family: 'Jim Nightshade', cursive;
+}
+.submit {
+    position:relative;
+    left: 75%;
+    margin-top: 95%;
+    width: 100%;
+    font-size: 20px;
+    color:#000;
+    font-family: 'Jim Nightshade', cursive;
+}
+
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #de2e20;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #b91b0e}
+
+.button:active {
+  background-color: #b91b0e;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.modal-header {
+    padding:9px 15px;
+    border-bottom:1px solid #eee;
+    background-color: #e7877f;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+     border-top-left-radius: 5px;
+     border-top-right-radius: 5px;
+ }
+.modal-body {
+    text-align:center;
+    font-size:20px;
+    background-color: #f3c2be;
+}
+.modal-footer{
+     background-color: #e7877f;
+}
+</style>
+</head>
+<body>
+
+<div class="box-outer">
+  <div class="main_box">
+    <div class="center">Learners's License Test</div>
+    <div class="bar top "></div>
+    <div class="bar right delay"></div>
+    <div class="bar bottom delay"></div>
+    <div class="bar left "></div>
+  </div>
+</div>
+
+<form>
+<div class="q1">
+<h3> Q:1   Overtaking is prohibited in the following case <h3>
+<input type="radio" name="Q1" id="Q1_A" value="G" /> State highways <br>
+<input type="radio" name="Q1" id="Q1_B" value="UG" /> Panchayath roads. <br>
+<input type="radio" name="Q1" id="Q1_C" value="BA" /> Narrow bridge. <br><br>
+
+<h3> Q:2  When your vehicle is being overtaken, you should<h3>
+<input type="radio" name="Q2" id="Q2_A" value="NR" /> Stop your vehicle and let the vehicle to overtake <br>
+<input type="radio" name="Q2" id="Q2_B" value="CR" /> Increase the speed of your vehicle <br>
+<input type="radio" name="Q2" id="Q2_C" value="T" /> Not obstruct the other vehicle from over taking <br><br>
+
+<h3> Q:3  One time tax for a new car is for <h3>
+<input type="radio" name="Q3" id="Q3_A" value="SR" /> Till the registration of the vehicle is cancelled<br>
+<input type="radio" name="Q3" id="Q3_B" value="AW" /> 15 years<br>
+<input type="radio" name="Q3" id="Q3_C" value="SL" /> 5 years<br><br>
+
+<h3 > Q:4  To Signal while taking U-turn <h3>
+<input type="radio" name="Q4" id="Q4_A" value="CR" /> Left turn signal<br>
+<input type="radio" name="Q4" id="Q4_B" value="CL" /> Right turn signal<br>
+<input type="radio" name="Q4" id="Q4_C" value="SR" /> Slow down signal<br><br>
+
+<h3> Q:5  Minimum age for getting a licence to drive motor cycle without gear<h3>
+<input type="radio" name="Q5" id="Q5_A" value="HA" />16 years<br>
+<input type="radio" name="Q5" id="Q5_B" value="WA" /> 18 years<br>
+<input type="radio" name="Q5" id="Q5_C" value="NE" /> 21 years<br><br>
+</div>
+<div class="q2">
+<h3> Q:6  While you are driving with the head light in high beam during night, a vehicle approaches from <h3>
+<input type="radio" name="Q6" id="Q6_A" value="SP" />Proceed keeping to the left<br>
+<input type="radio" name="Q6" id="Q6_B" value="PP" />Put the head light in dim and bright alternatively several times<br>
+<input type="radio" name="Q6" id="Q6_C" value="PPR" />Dim the head light till the vehicle passes<br><br>
+
+<h3> Q:7  The pedestrians shall not cross the road at sharp bends or very near to a stopped vehicle. Why?<h3>
+<input type="radio" name="Q7" id="Q7_A" value="NAM" />Inconvenience to other vehicles<br>
+<input type="radio" name="Q7" id="Q7_B" value="NCY" />Inconvenience to other road users<br>
+<input type="radio" name="Q7" id="Q7_C" value="PPR" />Drivers of other vehicles coming at a distance may not see persons crossing the road<br><br>
+
+<h3> Q:8  Where the slippery road sign is seen on the road, the driver shall <h3>
+<input type="radio" name="Q8" id="Q8_A" value="ERP" />Reduce the speed by changing the gear<br>
+<input type="radio" name="Q8" id="Q8_B" value="ELP" />Apply brake<br>
+<input type="radio" name="Q8" id="Q8_C" value="OP" />Proceed in the same speed<br><br>
+
+<h3> Q:9  When a Vehicle is parked on the road side during night <h3>
+<input type="radio" name="Q9" id="Q9_A" value="H" />The person having licence to drive such a vehicle should be in the drivers seat<br>
+<input type="radio" name="Q9" id="Q9_B" value="R" />The park light shall remain lit<br>
+<input type="radio" name="Q9" id="Q9_C" value="F" />The vehicle should be locked<br><br>
+
+<h3> Q:10  In a road without footpath, the pedestrians<h3>
+<input type="radio" name="Q10" id="Q10_A" value="RB" />Should walk on the right side of the road<br>
+<input type="radio" name="Q10" id="Q10_B" value="NB" />May walk on either side of the road<br>
+<input type="radio" name="Q10" id="Q10_C" value="NR" />Should walk on the left side of the road<br><br>
+
+
+ <button type="button" class= "button" data-toggle="modal" data-target="#myModal" onclick="res()">Submit</button>
+
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+   
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Congratulations...!!</h4>
+        </div>
+        <div class="modal-body">
+        <p>Your score is: </p>
+          <p id="score"></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  </div>
+</form>
+<script>
+function res() {
+var s=0;
+if(document.getElementById('Q1_C').checked) {
+  s=s+1;
+}
+if(document.getElementById('Q2_C').checked) {
+  s=s+1;
+}
+if(document.getElementById('Q3_A').checked) {
+  s=s+1;
+}
+if(document.getElementById('Q4_B').checked) {
+  s=s+1;
+}
+if(document.getElementById('Q5_A').checked) {
+  s=s+1;
+}
+if(document.getElementById('Q6_C').checked) {
+  s=s+1;
+}
+if(document.getElementById('Q7_C').checked) {
+  s=s+1;
+}
+if(document.getElementById('Q8_A').checked) {
+  s=s+1;
+}
+if(document.getElementById('Q9_B').checked) {
+  s=s+1;
+}
+if(document.getElementById('Q10_A').checked) {
+  s=s+1;
+}
+document.getElementById('score').innerHTML=s;
+$('input[type="radio"]:checked').prop('checked',false);
+
+}
+</script>
+</body>
+</html>
+
